@@ -1,0 +1,119 @@
+html{
+    font-family: Calibri;
+}
+.wraper::before{ /*Добавляет контент в начале тега */
+    content: 'Меню';/*Обезательный параметр*/
+    
+}
+.wraper::after{/*Добавляет контент в конце тега */
+    content: url('main-fish.png');
+
+}
+ul li{
+    line-height: 2;
+}
+ul li:first-child{
+    /*псевдоселектор - выбирает 1 элемент из детей тега */
+    color: red;
+}
+ul li:last-child{
+    /*псевдоселектор - выбирает последний элемент из детей тега */
+    color: blue;
+}
+ul li:nth-child(5){
+    /*Функция в которою передается целое значение, либо выражение*/
+    color:blueviolet;
+}
+ul li:nth-child(odd){
+    /*нечетные*/
+    color: brown;
+}
+ul li:nth-child(even){
+    /*четные*/
+    color: darkgreen;
+}
+ul li:nth-child(5n){
+    /*каждый 5*/
+    color: tomato;
+}
+ul li:nth-child(5n + 1){
+    /*каждый 5 плюс 1*/
+    color:aqua;
+}
+/* Продивитись дома псевдоселектори */
+
+.descr, .descr2{
+    font-size: 20px;
+    color: darkgoldenrod;
+}
+.descr{
+    text-decoration: underline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900; /* 100-900 */
+}
+.button{
+    text-decoration: none;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 10px 10px;
+    border-radius: 10px 10px 5px 10px;
+    background: firebrick;
+    color: white;
+}
+.button:hover{/* Действие при наведении на елемент*/
+    opacity: 0.7;/*Прозрачность*/
+}
+.button:active{/* Действие при нажатии*/
+    border: 3px solid black;
+}
+
+.button:focus{
+    color: aqua;
+}
+.wraper:focus-within{/* Событие - при фокусе элемента внутри блока приминяет стили    
+                                                                  Прописывается к родительському элементу в котором есть
+                                                                                                             активный элемент */
+    background: rebeccapurple;
+}
+div.button:last-of-type{
+    background: rgba(0, 0, 0, .4);
+}
+a.button:first-of-type{/* вырвнивание в кнопке по вертикале (надпись поцентру кнопки)*/
+   padding: 0 30px;
+   height: 80px;
+   line-height: 80px;
+   vertical-align: top; /*!!!!!!!!!*/
+}
+a.button:first-of-type:first-letter{
+    font-size: inherin;
+}
+/*Приоритетность селекторов при их написании*/
+#box{
+    padding: 20px;
+}
+
+.box{
+    padding: 50px;
+}
+body .box{
+    padding: 60px;
+}
+/*
+    * 0
+    li 1
+    li:first-letter 2
+    ul li 2
+    .class 10
+    ul li.class 12
+    li.class.class 21
+    #id 100 */
+.position{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.pos-wrap{
+    height: 500px;
+    width: 500px;
+    position: relative;
+}

@@ -1,0 +1,18 @@
+#MainText {
+
+	padding: 15px;
+	background: red;
+}
+div#paragraph1 p.note {
+	color: red;
+}
+div.box-span > div span{
+	color: orange;
+}
+h1 + span + p {
+	font-size: 25px
+}
+h1 ~ p{
+	font-family: fantasy;
+}
+/*coment v css*/
